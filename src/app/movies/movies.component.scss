@@ -1,0 +1,7 @@
+.grid-width {
+  @apply max-w-[328px] threeColumns:max-w-[500px] fourColumns:max-w-[672px] fiveColumns:max-w-[884px] sixColumns:max-w-[1066px] sevenColumns:max-w-[1248px]
+}
+
+.grid-comluns {
+  @apply grid-cols-2 threeColumns:grid-cols-3 fourColumns:grid-cols-4 fiveColumns:grid-cols-5 sixColumns:grid-cols-6 sevenColumns:grid-cols-7
+}

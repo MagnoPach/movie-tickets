@@ -1,0 +1,12 @@
+<div *ngIf="moviesCataloge">
+  <section class="w-full h-14 bg-white flex items-center justify-center mb-4">
+    <input (touchenter)="cleanSearchBar()" (mouseenter)="cleanSearchBar()" [(ngModel)]="searchingText" class="w-full max-w-[1248px] mx-4 md:mx-0 font-Nunito font-normal text-[#000000DD] text-[14px] antialiased bg-[#F1F3F4] border border-[#00000035] focus:outline-none focus:border-[#00000035] focus:ring-1 focus:ring-[#00000035] rounded py-[10px] pl-4" type="text" #filterValue placeholder="Pesquisar">
+  </section>
+  <section [ngClass]="isMobile ? 'overflow-y-auto' : ''" class="w-full max-h-[80vh] px-4 pb-4">
+    <div class="grid-width grid grid-comluns auto-cols-[156px] gap-4 fiveColumns:gap-x-[26px] fiveColumns:gap-y-6 mx-auto transition-all">
+      <div *ngFor="let movie of grabFilteredMovies()">
+        <app-movie-card [movie]="movie"></app-movie-card>
+      </div>
+    </div>
+  </section>
+</div>

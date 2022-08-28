@@ -1,0 +1,8 @@
+<div [ngClass]="!isMobile ? 'hover:scale-110' : ''" class="max-w-[156px] h-[243px] bg-white shadow-movieCard rounded flex flex-col items-center justify-between transition-all">
+  <div class="w-full flex flex-col items-center justify-start">
+    <img class="h-[140px] py-2" [src]="movie.image" alt="">
+    <p class="w-full font-Norms text-base leading-4 font-bold text-left text-[#00000099] title-limited px-2 pb-1">{{movie.title}}</p>
+    <p class="w-full font-Norms text-xs leading-4 font-normal text-left text-[#00000099] px-2 whitespace-nowrap">{{movie.genres.join(' - ')}}</p>
+  </div>
+  <button (click)="findTheatersShowingTheMovie(movie.id)" class="w-[90%] h-8 bg-[#1E1E1E] hover:bg-opacity-80 rounded font-Nunito text-sm text-white mb-2 mx-2 transition-all ">Comprar</button>
+</div>
