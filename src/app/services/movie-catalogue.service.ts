@@ -13,6 +13,7 @@ export class MovieCatalogueService {
   private endpointTheaters: string = 'https://61aa6838bfb110001773f224.mockapi.io/streamshop-test/api/v1/events/{0}/theaters'
 
   constructor(private httpClient: HttpClient) { }
+  // ahah
 
   public getMoviesFromApi(): Observable<MovieData[]> {
 				const endpoint: string = this.endpointMovies;
