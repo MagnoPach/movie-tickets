@@ -11,6 +11,7 @@ export class MovieCatalogueService {
 
   private endpointMovies: string = 'https://61aa6838bfb110001773f224.mockapi.io/streamshop-test/api/v1/events'
   private endpointTheaters: string = 'https://61aa6838bfb110001773f224.mockapi.io/streamshop-test/api/v1/events/{0}/theaters'
+  // kkkkk
 
   constructor(private httpClient: HttpClient) { }
 
