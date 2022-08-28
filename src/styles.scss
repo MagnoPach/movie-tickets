@@ -1,11 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
-@import url('http://fonts.cdnfonts.com/css/tt-norms-pro');
+// @import url('http://fonts.cdnfonts.com/css/tt-norms-pro');
+@font-face {
+  font-family: 'TT Norms Pro';
+  font-weight: 400;
+  font-display: swap;
+  src: url('./assets/fonts/TTNormsPro/TTNormsProRegular.otf') format('opentype');
+}
+@font-face {
+  font-family: 'TT Norms Pro';
+  font-weight: 700;
+  font-display: swap;
+  src: url('./assets/fonts/TTNormsPro/TTNormsProBold.otf') format('opentype');
+}
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 
 body {
