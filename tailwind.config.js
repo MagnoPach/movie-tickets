@@ -1,10 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{html, css, scss,ts}"],
-  purge: {
-    enabled: true,
-    content: ["./src/**/*.{html, css, scss,ts}"],
-  },
   theme: {
     fontFamily: {
       Nunito: ['Nunito', 'sans-serif'],
