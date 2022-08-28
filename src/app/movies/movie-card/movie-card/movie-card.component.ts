@@ -19,6 +19,7 @@ export class MovieCardComponent implements OnInit {
   public readonly clickEvent: EventEmitter<string[]> = new EventEmitter<string[]>();
 
   constructor(@Inject(MobileCheckService) private mobileCheckService: MobileCheckService, private router: Router) {
+    // fjfjfjf
   }
 
   ngOnInit(): void {
