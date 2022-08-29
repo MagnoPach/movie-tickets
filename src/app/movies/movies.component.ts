@@ -46,23 +46,4 @@ export class MoviesComponent implements OnInit {
     })
 		return temasFiltrados;
 	}
-
-  public comunicarRegulamento(): void {
-		// if (this.valeData && this.valeData.opcoes.promotionID > 0) {
-		// 	this.valeService.getPolicy(this.valeData.opcoes.promotionID)
-		// 		.subscribe((policy: IDataPolicy) => {
-		// 			if (policy && (policy.conteudo || "").length > 0) {
-		// 				this.textModal.open("", `<div class='regulamento-promocoes text-left'>
-		// 					${policy.conteudo
-		// 						.replace(/<p>/gi, "<p class='mb-4'>")
-		// 						.replace(/<a /gi, "<a class='font-bold text-primary1' ")
-		// 					}</div>`);
-		// 			}
-		// 		}, (error: Error) => {
-		// 			console.error("Problema ao carregar o regulamento", error);
-		// 			this.simpleModal.open("Problema ao carregar o regulamento", "Tente novamente mais tarde");
-		// 		});
-		// }
-	}
-
 }

@@ -25,7 +25,7 @@
         [ngClass]="email.invalid && formDir.submitted ? 'after:border-red-600' : 'after:border-[#33333399]'">
           <span
           [ngClass]="email.invalid && formDir.submitted ? 'text-red-600' : 'text-[#33333366]'"
-          class="content-name font-Norms font-normal text-base tracking-[0.32px] text-[#33333366] bg-white px-1">
+          class="content-name font-Norms font-normal text-base tracking-[0.32px] bg-white px-1">
             Email
           </span>
         </label>
@@ -34,10 +34,10 @@
         <input type="text" mask="(00) 00000-0000" [showMaskTyped]="true" formControlName="celphone"
         [ngClass]="celphone.invalid && formDir.submitted ? 'border-red-600 text-red-600' : 'border-[#33333399] text-black'"/>
         <label for="text" class="label-name"
-        [ngClass]="email.invalid && formDir.submitted ? 'after:border-red-600' : 'after:border-[#33333399]'">
+        [ngClass]="celphone.invalid && formDir.submitted ? 'after:border-red-600' : 'after:border-[#33333399]'">
           <span
-          [ngClass]="email.invalid && formDir.submitted ? 'text-red-600' : 'text-[#33333366]'"
-          class="content-name font-Norms font-normal text-base tracking-[0.32px] text-[#33333366] bg-white px-1">
+          [ngClass]="celphone.invalid && formDir.submitted ? 'text-red-600' : 'text-[#33333366]'"
+          class="content-name font-Norms font-normal text-base tracking-[0.32px] bg-white px-1">
             Telefone
           </span>
         </label>

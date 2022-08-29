@@ -20,7 +20,7 @@ module.exports = {
       'sevenColumns': '1250px',
       'tablet': '640px',
       'tablet-Var2': '768px',
-      'tablet-Var3': '90px',
+      'tablet-Var2': 'px',
       'laptop': '1024px',
       'desktop': '1280px',
     },
