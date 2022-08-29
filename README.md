@@ -39,14 +39,7 @@
 
 ## Sobre
 
-[![Captura de tela do Elenco Campeão][tela-elenco-campeao]](https://movie-tickets-1e11nsn3a-magnopach.vercel.app/movies)
-
 <br />
-
-Esse projeto foi proposto como teste em um processo seletivo para Desenvolvedor Front-End.
-
-Os objetivos do projeto giravam em torno do desenvolvimento do front-end da pagina descritiva sobre o elenco do Clube Palmeira, vencedor da Libertadores de 2021. O projeto foi desenvolvido seguindo fielmente o _design_ disponibilizado, sendo vedado, o uso de _frameworks_ CSS. Os objetivos incluíam, também, o emprego de tecnologias JavaScript e de pré-processadores de CSS para o desenvolvimento.
-
 ### Construído com
 
 - [Angular](https://angular.io/)
