@@ -1,27 +1,99 @@
-# MovieTheaterTicket
+<br />
+<br />
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.
+<p align="center">
+  <h3 align="center">Movie Theater Tickets</h3>
 
-## Development server
+  <p align="center">
+    <br />
+    <a href="https://movie-tickets-1e11nsn3a-magnopach.vercel.app/movies">Ver demonstração</a>
+  </p>
+</p>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+<br />
+<br />
+<br />
 
-## Code scaffolding
+<details open="open">
+  <summary>Índice de conteúdo</summary>
+  <ol>
+    <li>
+      <a href="#sobre">Sobre</a>
+      <ul>
+        <li><a href="#construído-com">Construído com</a></li>
+        <li><a href="#funcionalidades">Funcionalidades</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#executando">Executando</a></li>
+      <ul>
+        <li><a href="#pré-requisitos">Pré-requisitos</a></li>
+        <li><a href="#instalacão">Instalação</a></li>
+      </ul>
+    </li>
+    <li><a href="#contato">Contato</a></li>
+  </ol>
+</details>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+<br />
 
-## Build
+## Sobre
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+[![Captura de tela do Elenco Campeão][tela-elenco-campeao]](https://movie-tickets-1e11nsn3a-magnopach.vercel.app/movies)
 
-## Running unit tests
+<br />
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Esse projeto foi proposto como teste em um processo seletivo para Desenvolvedor Front-End.
 
-## Running end-to-end tests
+Os objetivos do projeto giravam em torno do desenvolvimento do front-end da pagina descritiva sobre o elenco do Clube Palmeira, vencedor da Libertadores de 2021. O projeto foi desenvolvido seguindo fielmente o _design_ disponibilizado, sendo vedado, o uso de _frameworks_ CSS. Os objetivos incluíam, também, o emprego de tecnologias JavaScript e de pré-processadores de CSS para o desenvolvimento.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Construído com
 
-## Further help
+- [Angular](https://angular.io/)
+- [TypeScript]
+- [TailWindCss](https://tailwindcss.com/)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Funcionalidades
+
+1. Filtro de busca
+2. Exibição de filmes em grid
+3. Navegação com parametros de rota
+4. Formulario de inscrição reativo
+
+<br />
+
+## Executando
+
+### Pré-requisitos
+
+Antes de começar, você precisará ter instalado em sua máquina as seguintes ferramentas:
+
+1. [Node 14.19.0 e NPM](http://nodejs.org)
+
+### Instalação
+
+1. Baixe este repositório
+2. Acesse a pasta raiz do repositório baixado através do CLI (_Command Line Interface_, Interface de Linha de Comando: cmd, PowerShell, bash, etc)
+3. Execute o seguinte comando e aguarde a instalação das dependências do projeto:
+
+```sh
+  npm install
+```
+
+4. Execute o seguinte comando para iniciar o projeto:
+
+```sh
+  ng serve
+```
+
+5. Aguarde a abertura automática do seu navegador padrão já na página do projeto. Caso isso não ocorra, acesse o projeto através do seu navegador preferido no seguinte endereço:
+
+```http
+localhost:42000
+```
+
+<br />
+
+## Contato
+
+Magno Cruz - [LinkedIn](https://www.linkedin.com/in/magno-cruz/)
