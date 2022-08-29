@@ -42,7 +42,7 @@ export class MoviesComponent implements OnInit {
 
   public grabFilteredMovies(): MovieData[] {
 		const temasFiltrados: MovieData[] = this.moviesCataloge.filter((movie) => {
-      return movie.title.includes(this.searchingText);
+      return movie.title.toLowerCase().includes(this.searchingText.toLowerCase());
     })
 		return temasFiltrados;
 	}
