@@ -20,6 +20,7 @@
 @import "tailwindcss/utilities";
 
 
-body {
-  background-color: #F1F3F4;
+body, html{
+  background-color: #fff;
+  height: 100%;
 }

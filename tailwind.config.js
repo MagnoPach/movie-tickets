@@ -18,7 +18,13 @@ module.exports = {
       'fiveColumns': '912px',
       'sixColumns': '1094px',
       'sevenColumns': '1250px',
+      'tablet': '640px',
+      'tablet-Var2': '768px',
+      'tablet-Var3': '90px',
+      'laptop': '1024px',
+      'desktop': '1280px',
     },
+
     extend: {},
   },
   plugins: [],

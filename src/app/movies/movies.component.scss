@@ -5,3 +5,7 @@
 .grid-comluns {
   @apply grid-cols-2 threeColumns:grid-cols-3 fourColumns:grid-cols-4 fiveColumns:grid-cols-5 sixColumns:grid-cols-6 sevenColumns:grid-cols-7
 }
+
+.box-content {
+  height: calc(100% - 56px);
+}

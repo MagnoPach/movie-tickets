@@ -2,18 +2,29 @@ import { MoviesComponent } from './movies.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { MovieCatalogueService } from '../services/movie-catalogue.service';
+import { TheatersComponent } from './theaters/theaters/theaters.component';
+import { UserSignupComponent } from './user-signup/user-signup.component';
 
 const routes: Routes = [
     {
-        path: '',
+        path: 'movies',
         component: MoviesComponent,
-        children: [
-            // {
-            //     path: 'theaters',
-            //     component: TermsComponent
-            // },
-        ]
-    }
+    },
+    {
+      path: 'movies/:id',
+      component: TheatersComponent,
+    },
+    {
+        path: 'sign-up',
+        component: UserSignupComponent,
+    },
+
+    {
+      // TODO: Jogar para página não encontrada (404..)
+      path: '**',
+      pathMatch: 'full',
+      redirectTo: 'movies',
+  }
 ];
 
 @NgModule({

@@ -1,0 +1,29 @@
+<div class="box-content">
+  <div class="w-full flex flex-col items-center justify-start px-4 bg-white">
+    <div *ngIf="!isLoaded" class="w-[114px] h-[184px] bg-[#F1F3F4] my-2 animate-pulse flex space-x-4">
+      <div class="rounded-full bg-slate-200 h-10 w-10"></div>
+      <div class="flex-1 space-y-6 py-1">
+        <div class="h-2 bg-slate-200 rounded"></div>
+        <div class="space-y-3">
+          <div class="grid grid-cols-3 gap-4">
+            <div class="h-2 bg-slate-200 rounded col-span-2"></div>
+            <div class="h-2 bg-slate-200 rounded col-span-1"></div>
+          </div>
+          <div class="h-2 bg-slate-200 rounded"></div>
+        </div>
+      </div>
+    </div>
+      <img *ngIf="isLoaded" class="h-[184px] py-2" [src]="movie.image" alt="">
+      <div class="w-full max-w-[900px]">
+      <p class="w-full font-Roboto text-xl font-bold tracking-[0.4px] text-left text-[#000000DD] pb-1">{{movie.title}}</p>
+      <section class="max-w-[900px] max-h-[80vh] overflow-y-auto pb-4 bg-white">
+        <div class="w-full grid grid-cols-1 gap-y-3 transition-all">
+          <div *ngFor="let theater of theatersShowingMovie">
+            <app-theater-card [theater]="theater" [isLoaded]="isLoaded"></app-theater-card>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+

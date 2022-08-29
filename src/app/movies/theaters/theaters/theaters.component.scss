@@ -1,0 +1,8 @@
+section::-webkit-scrollbar {
+  display: none;
+}
+
+.box-content {
+  height: calc(100% - 56px);
+}
+

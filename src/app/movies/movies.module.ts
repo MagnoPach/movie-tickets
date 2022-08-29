@@ -5,20 +5,30 @@ import { HttpClient } from '@angular/common/http';
 import { MoviesComponent } from './movies.component';
 import { MoviesRoutingModule } from './movies-routing.module';
 import { MovieCardComponent } from './movie-card/movie-card/movie-card.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TheatersComponent } from './theaters/theaters/theaters.component';
+import { NavigationContentService } from '../services/navigation-content.service';
+import { TheaterCardComponent } from './theaters/theater-card/theater-card.component';
+import { UserSignupComponent } from './user-signup/user-signup.component';
+import { NgxMaskModule } from 'ngx-mask';
 
 
 @NgModule({
   declarations: [
     MoviesComponent,
-    MovieCardComponent
+    MovieCardComponent,
+    TheatersComponent,
+    TheaterCardComponent,
+    UserSignupComponent
   ],
   imports: [
     CommonModule,
     MoviesRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    NgxMaskModule.forChild()
   ],
   exports: [MoviesComponent],
-  providers: [HttpClient]
+  providers: [HttpClient, NavigationContentService]
 })
 export class MoviesModule { }

@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { MovieData } from 'src/app/models/movie.model';
+import { IDataNavigation, NavigationContentService } from 'src/app/services/navigation-content.service';
 
 
 @Component({
@@ -16,10 +17,8 @@ export class MovieCardComponent implements OnInit {
   @Input() movie: MovieData = <MovieData>{};
 
   public isMobile: boolean = false;
-  public readonly clickEvent: EventEmitter<string[]> = new EventEmitter<string[]>();
 
-  constructor(@Inject(MobileCheckService) private mobileCheckService: MobileCheckService, private router: Router) {
-    // fjfjfjf
+  constructor(@Inject(MobileCheckService) private mobileCheckService: MobileCheckService,  @Inject(NavigationContentService) private navigationContentService: NavigationContentService, private router: Router) {
   }
 
   ngOnInit(): void {
@@ -35,9 +34,15 @@ export class MovieCardComponent implements OnInit {
   }
 
   public findTheatersShowingTheMovie(movieId: string): void {
-    const params ={ eventId: movieId }
-    this.router.navigate(['theaters'], { queryParams: params })
-    this.clickEvent.emit(['',JSON.stringify(params)])
+    const params: object = { eventId: movieId }
+    // const navigationData = Object.assign(<IDataNavigation>{}, {route:'theaters', param:{eventId: movieId}})
+    const navigationData = Object.assign(<IDataNavigation>{}, {route:'/'})
+    this.router.navigate(['movies', movieId])
+    this.sendNavigationData(navigationData)
+  }
+
+  private sendNavigationData(navigationData: IDataNavigation): void {
+    this.navigationContentService.sendNavigationData(navigationData);
   }
 
   // public movieTitleFormartter(title: string): string {

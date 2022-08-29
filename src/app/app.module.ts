@@ -5,6 +5,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MoviesModule } from './movies/movies.module';
+import { NavigationContentService } from './services/navigation-content.service';
+import { IConfig, NgxMaskModule } from 'ngx-mask';
+
+export const options: Partial<null | IConfig> | (() => Partial<IConfig>) = null;
 
 @NgModule({
   declarations: [
@@ -15,8 +19,9 @@ import { MoviesModule } from './movies/movies.module';
     AppRoutingModule,
     HttpClientModule,
     MoviesModule,
+    NgxMaskModule.forRoot()
   ],
-  providers: [],
+  providers: [NavigationContentService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

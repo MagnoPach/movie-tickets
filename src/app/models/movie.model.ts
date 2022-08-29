@@ -17,8 +17,11 @@ export interface TheaterData {
 export interface RoomData {
   name: string;
   types: string[];
-  sessions: {
-    price: number;
-    time:string;
-  }
+  sessions: SessionData[]
+}
+export interface SessionData {
+
+  price: number;
+  time: string;
+
 }

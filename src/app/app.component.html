@@ -1,9 +1,14 @@
-<header class="w-full h-14 bg-black flex items-center justify-center relative">
-  <button *ngIf="currentRoute !== ''" class="w-7 h-7 absolute top-4 left-4">
-    <span class="material-icons text-[28px] text-white">
-      navigate_before
-    </span>
-  </button>
-  <img class="max-w-[224px]" [src]="streamshopLogo" alt="Logo da StreamShop">
-</header>
-<router-outlet (activate)="subscribeToEmmiter($event)"></router-outlet>
+<div class="w-full h-full">
+  <header class="w-full h-14 bg-black flex items-center justify-center relative">
+    <button [routerLinkActive]="['/movie:id']" *ngIf="isHome" (click)="backArrowButton()" class="w-7 h-7 absolute top-4 left-4">
+      <span class="material-icons text-[28px] text-white">
+        navigate_before
+      </span>
+    </button>
+    <a [routerLink]="['/']">
+      <img class="max-w-[224px]" [src]="streamshopLogo" alt="Logo da StreamShop">
+    </a>
+  </header>
+  <router-outlet></router-outlet>
+</div>
+<!-- {{ isHome | json}} -->

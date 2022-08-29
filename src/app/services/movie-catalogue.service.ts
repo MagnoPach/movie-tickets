@@ -22,8 +22,8 @@ export class MovieCatalogueService {
       );
 	}
 
-  public catchTheatersShowingTheMovie(promotionId: string): Observable<TheaterData[]> {
-				const endpoint: string = `${this.endpointTheaters.replace('{0}', promotionId)}`;
+  public catchTheatersShowingTheMovie(eventId: string): Observable<TheaterData[]> {
+				const endpoint: string = `${this.endpointTheaters.replace('{0}', eventId)}`;
 				return this.httpClient.get<TheaterData[]>(endpoint).pipe(
           tap(data => console.log('All: ' + JSON.stringify(data))),
           catchError(this.handleError<TheaterData[]>('theaters', []))

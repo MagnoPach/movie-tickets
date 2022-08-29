@@ -1,0 +1,60 @@
+<div class="box-content bg-white">
+  <form [formGroup]="userSignUpForm" #formDir="ngForm" (ngSubmit)="onSubmit()" class="tablet:w-full tablet:max-w-[900px] h-full flex flex-col justify-between p-4 mx-auto">
+    <div class="w-full" >
+      <div class="form">
+        <input type="text" formControlName="nome" [ngClass]="nome.invalid && formDir.submitted ? 'border-red-600 text-red-600' : 'border-[#33333399] text-black'" />
+        <label for="text"
+        [ngClass]="nome.invalid && formDir.submitted ? 'after:border-red-600' : 'after:border-[#33333399]'"
+        class="label-name after:border-b-[3px]">
+          <span
+          [ngClass]="nome.invalid && formDir.submitted ? 'text-red-600' : 'text-[#33333366]'"
+          class="content-name font-Norms font-normal text-base tracking-[0.32px]  bg-white px-1">
+            Nome
+          </span>
+        </label>
+      </div>
+      <div class="form">
+        <input type="text" formControlName="email"
+        [ngClass]="email.invalid && formDir.submitted ? 'border-red-600 text-red-600' : 'border-[#33333399] text-black'"/>
+        <label for="text" class="label-name"
+        [ngClass]="email.invalid && formDir.submitted ? 'after:border-red-600' : 'after:border-[#33333399]'">
+          <span
+          [ngClass]="email.invalid && formDir.submitted ? 'text-red-600' : 'text-[#33333366]'"
+          class="content-name font-Norms font-normal text-base tracking-[0.32px] text-[#33333366] bg-white px-1">
+            Email
+          </span>
+        </label>
+      </div>
+      <div class="form">
+        <input type="text" mask="(00) 00000-0000" [showMaskTyped]="true" formControlName="celphone"
+        [ngClass]="celphone.invalid && formDir.submitted ? 'border-red-600 text-red-600' : 'border-[#33333399] text-black'"/>
+        <label for="text" class="label-name"
+        [ngClass]="email.invalid && formDir.submitted ? 'after:border-red-600' : 'after:border-[#33333399]'">
+          <span
+          [ngClass]="email.invalid && formDir.submitted ? 'text-red-600' : 'text-[#33333366]'"
+          class="content-name font-Norms font-normal text-base tracking-[0.32px] text-[#33333366] bg-white px-1">
+            Telefone
+          </span>
+        </label>
+      </div>
+      <div class="flex items-center justify-start pb-4">
+        <input type="checkbox" class="accent-black w-6 h-6" formControlName="agree_notifications">
+        <span class="font-Nunito font-bold text-sm tracking-[0.28px] text-black ml-2">Quero receber notificações</span>
+      </div>
+      <div class="flex items-center justify-start pb-4">
+        <input type="checkbox" class="accent-black w-6 h-6" formControlName="agree_terms">
+        <span
+        [ngClass]="agree_terms.invalid && formDir.submitted ? 'text-red-600' : 'text-black'"
+        class="font-Nunito font-bold text-sm tracking-[0.28px] ml-2">Li e aceito os termo de uso</span>
+      </div>
+    </div>
+    <button type="submit" class="w-full h-8 bg-[#1E1E1E] tablet:hover:bg-opacity-80 rounded font-Nunito text-sm text-white active:translate-y-0.5 transition-all ">Finalizar Cadastro</button>
+  </form>
+</div>
+
+<div *ngIf="modalOpen" class="w-full h-screen absolute left-0 bottom-0 bg-[#0000001F] flex items-end justify-center">
+  <div class="w-full h-12 shadow-movieCard flex items-center justify-center bg-[#00000099] rounded mx-4 mb-4">
+    <p class="font-Roboto font-normal text-white text-xs">Cadastro realizado com sucesso!!!</p>
+  </div>
+</div>
+
