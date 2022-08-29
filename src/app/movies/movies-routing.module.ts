@@ -15,7 +15,7 @@ const routes: Routes = [
       component: TheatersComponent,
     },
     {
-        path: 'sign-up',
+        path: 'sign-up/:id',
         component: UserSignupComponent,
     },
 

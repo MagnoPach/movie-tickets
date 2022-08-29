@@ -1,6 +1,7 @@
 import { ChangeDetectorRef, Component, OnInit, ViewChild } from '@angular/core';
 import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-user-signup',
@@ -10,11 +11,16 @@ import { Router } from '@angular/router';
 export class UserSignupComponent implements OnInit {
 
   public userSignUpForm!: FormGroup
+  public paramSubscription!: Subscription;
   public isMobile: boolean = false;
   public isLoaded: boolean = false;
   public modalOpen: boolean = false;
+  private eventIdParam!: string;
 
-  constructor(private router: Router) {
+  constructor(private route: ActivatedRoute, private router: Router) {
+    this.paramSubscription = this.route.params.subscribe((params: any) => {
+      this.eventIdParam = params['id']
+    })
   }
 
   ngOnInit(): void {
@@ -65,4 +71,8 @@ export class UserSignupComponent implements OnInit {
 			});
 		}
 	}
+
+  public backToTheaterpage(): void {
+    this.router.navigate(['/movies', this.eventIdParam], {replaceUrl:true})
+  }
 }

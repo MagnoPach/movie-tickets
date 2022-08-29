@@ -1,4 +1,9 @@
-<div class="box-content">
+<div class="box-content relative">
+  <button [routerLink]="['/']" class="w-7 h-7 absolute -top-10 left-4">
+    <span class="material-icons text-[28px] text-white">
+      navigate_before
+    </span>
+  </button>
   <div class="w-full flex flex-col items-center justify-start px-4 bg-white">
     <div *ngIf="!isLoaded" class="w-[114px] h-[184px] bg-[#F1F3F4] my-2 animate-pulse flex space-x-4">
       <div class="rounded-full bg-slate-200 h-10 w-10"></div>

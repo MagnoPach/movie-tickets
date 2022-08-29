@@ -16,7 +16,7 @@ export class TheaterCardComponent implements OnInit {
 
   public isMobile: boolean = false;
 
-  constructor(@Inject(MobileCheckService) private mobileCheckService: MobileCheckService,  @Inject(NavigationContentService) private navigationContentService: NavigationContentService, private router: Router) {
+  constructor(@Inject(MobileCheckService) private mobileCheckService: MobileCheckService, private router: Router) {
   }
 
   ngOnInit(): void {
@@ -32,14 +32,7 @@ export class TheaterCardComponent implements OnInit {
   }
 
   public redirectToSignUp(movieId: string): void {
-    const params: object = { eventId: movieId }
-    const navigationData = Object.assign(<IDataNavigation>{}, {route:'/'})
-    this.router.navigate(['/sign-up'], {replaceUrl:true})
-    this.sendNavigationData(navigationData)
-  }
-
-  private sendNavigationData(navigationData: IDataNavigation): void {
-    this.navigationContentService.sendNavigationData(navigationData);
+    this.router.navigate(['sign-up', movieId], {replaceUrl:true})
   }
 
   public formartRoomTypeText(types: string): string {
